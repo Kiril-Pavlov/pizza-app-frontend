@@ -1,0 +1,320 @@
+/* body{
+  background-color: #1D2322;;
+}
+nav{
+  background-color: #00ada4;
+  padding: 20px;
+  color: #f7f7f7;
+}
+
+nav a{
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+#pizzaMenu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.product{
+  position: relative;
+  display: inline-block;
+  width: 22%;
+  text-align: center;
+  height: 500px;
+}
+
+.product img{
+    width: 90%;
+    height: 60%;
+}
+.product h2{
+  color: white;
+}
+
+.product button{
+  border: none;
+  padding: 10px;
+}
+
+.product p{
+  height: 60px;
+  color: #f7f7f7;
+}
+
+.priceTag{
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  background-color: #ffc600;
+  color: #f7f7f7;
+  width: 180px;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: normal;
+}
+.productDetails{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  color: #f7f7f7;
+}
+
+.quantitySelector{
+  background-color: white;
+  width: 60px;
+  color: black;
+  font-size: x-large;
+  border-radius: 10px;
+  padding: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#order{
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  margin: 5px;
+  vertical-align: middle;
+  background-color: #00ada4;
+  color: #f7f7f7;
+  font-weight: bold;
+} */
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root{
+  --dark-clr:#111111;
+  --light-clr:#EEEEEE;
+  --primary-clr:orange;
+  --secondary-clr: grey;
+
+  --font-large: 32px;
+  --font-medium: 24px;
+  --font-standard:16px;
+
+  --font-bold:700;
+}
+
+body{
+  background-color: var(--dark-clr);
+}
+
+/*  ---------------------- header styles ------------------------------------*/
+
+.page-title{
+  font-size: 50px;
+  color: var(--primary-clr);
+  font-weight: var(--font-bold);
+  text-align: center;
+  padding: 20px;
+}
+
+
+/*  ---------------------- navbar styles ------------------------------------*/
+.nav-container{
+  background-color: var(--primary-clr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.nav-item{
+  padding: 5px 20px;
+  text-decoration: none;
+  color: var(--dark-clr);
+  font-size: var(--font-medium);
+  font-weight: var(--font-bold);
+  transition: 1s;
+}
+
+.nav-item:hover{
+  background-color: var(--dark-clr);
+  color: var(--primary-clr);
+}
+
+
+.pizzas-container{
+  background-color: var(--dark-clr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 10px;
+  margin: 20px 20%;
+}
+
+.pizza-item{
+  width: 300px;
+  border: 1px solid var(--primary-clr);
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+
+.pizza-item img{
+  width: 250px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+.pizza-name{
+  font-size: var(--font-medium);
+  color: var(--primary-clr);
+  text-align: center;
+  padding: 5px;
+
+}
+
+.pizza-ingredients{
+  font-size: var(--font-standard);
+  color: var(--light-clr);
+  text-align: center;
+  padding: 5px;
+
+}
+
+.prices{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: var(--primary-clr);
+}
+
+.buy-button{
+  background-color: var(--primary-clr);
+  color: var(--dark-clr);
+  border-radius: 20px;
+  padding: 5px 30px;
+  font-size: var(--font-standard);
+  font-weight: var(--font-bold);
+  display: block;
+  margin: 20px auto;
+}
+
+
+
+
+/*--------------------------- footer styles ------------------------------------*/
+
+.footer{
+  padding: 5px;
+  font-size: var(--font-standard);
+  background-color: var(--primary-clr);
+  color: var(--dark-clr);
+  text-align: center;
+  font-weight: var(--font-bold);
+}
+
+
+/* TBC */
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.orders-container{
+  background-color: var(--dark-clr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 10px;
+  margin: 20px 20%;
+}
+
+.order-item{
+  width: 300px;
+  border: 1px solid var(--primary-clr);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: var(--primary-clr);
+}
+
+.order-item-confirmed{
+  background-color: green;
+}
+
+.order-item ol{
+  padding: 0px 15px;
+  color: var(--light-clr);
+}
+
+.delete-order-button{
+  background-color: var(--primary-clr);
+  color: var(--dark-clr);
+  position: relative;
+  float: right;
+  border: 0;
+  border-radius: 25%;
+  padding: 5px 10px;
+  margin: 15px;
+  vertical-align: middle;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#admin{
+  border: 1px solid var(--primary-clr);
+  color: var(--primary-clr);
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius:20px;
+}
+#admin > label {
+  width: 100%;
+  display: flex;
+  max-width: 400px;
+}
+#admin > label > input {
+  margin-left: auto;
+}
+
+.add-pizza-button{
+  background-color: var(--primary-clr);
+  color: var(--dark-clr);
+  border-radius: 20px;
+  padding: 5px 30px;
+  font-size: var(--font-standard);
+  font-weight: var(--font-bold);
+  display: block;
+  margin: 20px auto;
+}
+
+/* Search container styles */
+
+.search-container{
+  width: 500px;
+  display: flex;
+  justify-items: center;
+  margin: auto;
+  color: var(--primary-clr);
+  padding: 5px 20px;
+  margin: 5px 20px;
+
+}
+
+.search-container input{
+  margin: 0px 10px;
+}
+
+.tags-container{
+  color: var(--primary-clr);
+}
+
+.tags-manager-container{
+  color: var(--primary-clr);
+}
