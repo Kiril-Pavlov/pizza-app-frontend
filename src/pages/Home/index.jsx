@@ -42,16 +42,16 @@ const HomePage = () => {
         <div className='search-container'>Search: <input type="text" onChange={handleSearchChange} onKeyDown={handleKeyDown} /></div>
         <div className='tags-container'>
           {tags.map((tag, index) => (
-            <li key={tag}>
+            <div className='tag-item' key={tag}>
               <label>
-                {tag}:
                 <input type="checkbox" value={tag} checked={checkedState[index]} onChange={() => handleCheckedChange(index)} />
+                {tag}
               </label>
-            </li>
+            </div>
           ))}
         </div>
       </div>
-      <div id="pagination">
+      <div id="pagination" className='pagination'>
         {
           pageNumbers.map(_page => (
             <button onClick={() => handleGetPage(_page)}>{_page === page ? (<b>{_page}</b>) : _page}</button>
