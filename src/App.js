@@ -11,6 +11,7 @@ import Cart from "./components/Cart/Cart";
 import AdminPage from "./pages/Admin/AdminPage";
 import Orders from "./pages/Orders/OrdersPage";
 import TagManagerPage from "./pages/TagManager/TagManager";
+import EditPizza from "./pages/EditPizza/EditPizza";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="pizza" element={<Home />}></Route>
         <Route path="pizza/:pizzaName" element={<Pizza />} />
+        <Route path="edit/:id" element={<EditPizza/>}></Route>
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="admin" element={<AdminPage/>} />

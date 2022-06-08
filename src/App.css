@@ -362,3 +362,21 @@ body{
 .pagination button:hover{
   cursor: pointer;
 }
+
+
+/* edit pizzas page style */
+.edit-pizzas-container{
+  color: var(--primary-clr);
+}
+
+.edit-form{
+  color: var(--primary-clr);
+  border: 2px solid var(--primary-clr);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  align-self: center;
+}
