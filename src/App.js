@@ -12,6 +12,7 @@ import AdminPage from "./pages/Admin/AdminPage";
 import Orders from "./pages/Orders/OrdersPage";
 import TagManagerPage from "./pages/TagManager/TagManager";
 import EditPizza from "./pages/EditPizza/EditPizza";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 
 function App() {
@@ -21,15 +22,23 @@ function App() {
        <Header />
       <Navbar />
       <Routes>
+        {/* user routes */}
         <Route path="pizza" element={<Home />}></Route>
         <Route path="pizza/:pizzaName" element={<Pizza />} />
-        <Route path="edit/:id" element={<EditPizza/>}></Route>
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        {/* admin routes */}
+        <Route path="edit/:id" element={<EditPizza/>}></Route>
+        <Route path="edit"  element={<Home admin="true"/>}></Route>
         <Route path="admin" element={<AdminPage/>} />
         <Route path="tag-manager" element={<TagManagerPage/>} />
         <Route path="orders" element={<Orders/>} />
+
+        <Route path="dashboard" element={<Dashboard/>} />
+
+        {/* default route */}
         <Route path="*" element={<Navigate to="/pizza" replace />} />
+
       </Routes>
       <Footer />
     </div>

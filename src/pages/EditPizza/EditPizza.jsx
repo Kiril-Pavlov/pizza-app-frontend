@@ -56,6 +56,9 @@ function EditPizza() {
             <div>
                 {
                     tags.map((tag,index)=>{
+                        if(value.includes(tag)){
+                            handleCheckedState(index);
+                        }
                         return ( <label> 
                             <input type="checkbox" 
                                 checked={checkedState[index]}
